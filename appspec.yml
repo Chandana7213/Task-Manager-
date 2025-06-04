@@ -1,9 +1,12 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/MyAp
+
 hooks:
   AfterInstall:
-    - location: scripts/restart_server.sh
-      timeout: 300
-      runas: ubuntu
-  ApplicationStart:
     - location: uploadDir/postScript.sh
       timeout: 300
       runas: ubuntu
